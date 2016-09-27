@@ -99,7 +99,7 @@ public class ImageMask : MonoBehaviour
 			firstFrame = false;
 			RenderTexture old = RenderTexture.active;
 			RenderTexture.active = renderTexture;
-				GL.Clear(false, true, new Color(0.0f, 0.0f, 0.0f, 0.0f));
+				GL.Clear(false, true, new Color(0.0f, 0.0f, 0.0f, 1 - targetImage.color.a));
 			RenderTexture.active = old;
 		}
 		if (newHolePosition != null) {
